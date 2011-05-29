@@ -1,0 +1,12 @@
+h1. HTML5Boiler Plate
+
+* *HTML5Boiler Plate*: "HTML5Boiler Plate Home":http://html5boilerplate.com
+* *HTML5Boiler Plate on GitHub*: "HTML5Boiler Plate on GitHub":https://github.com/paulirish/html5-boilerplate
+
+h2. Sass
+
+* *SASS*: "Syntactically Awesome Stylesheets":http://sass-lang.com/
+
+h2. My drop and drag starter files
+
+Hamlized index & Sassed modular css bits of the html5 boiler plate files

@@ -1,0 +1,49 @@
+!!! :html5
+
+/[if lt IE 7 ] <html class="no-js ie6" lang="en">
+/[if IE 7 ] <html class="no-js ie7" lang="en">
+/[if IE 8 ] <html class="no-js ie8" lang="en">
+/[if (gte IE 9)|!(IE)] <!--> <html class="no-js" lang="en"> <!--
+
+%html
+  %head
+    %meta{:charset => "utf-8"}
+    %meta{:content => "IE=edge,chrome=1", "http-equiv" => "X-UA-Compatible"}
+    %title Project
+    %meta{:content => "", :name => "description"}
+    %meta{:content => "", :name => "author"}
+    %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}
+    %link{:rel=>"stylesheet", :type=>"text/css", :href=>"http://fonts.googleapis.com/css?family=Francois+One|Allerta|Droid+Sans"}
+    %link{:href => "/favicon.ico", :rel => "shortcut icon"}
+    %link{:href => "/apple-touch-icon.png", :rel => "apple-touch-icon"}
+    %link{:href => "stylesheets/application.css", :rel => "stylesheet"}
+    %script{:src => "javascripts/libs/modernizr-1.7.min.js"}
+
+  %body
+    %header.clearfix
+      #logo
+      #search
+      %nav
+        %ul
+          %li= link_to "Home", "#"
+
+    #main{:role => "main"}
+      = yield
+
+    / eo #main
+    %footer
+      %p
+        &copy; Copyright 2011 Project. All Rights Reserved.
+
+    %script{:src => "//ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.js"}
+	%script{:src => "javascripts/application.js"}
+    /[if lt IE 7 ]
+      %script{:src => "javascripts/libs/dd_belatedpng.js"}
+      :javascript
+        DD_belatedPNG.fix("img, .png_bg");
+
+    :javascript
+      var _gaq=[["_setAccount","UA-XXXXXX-XX"],["_trackPageview"]];
+      (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.async=1;
+      g.src=("https:"==location.protocol?"//ssl":"//www")+".google-analytics.com/ga.js";
+      s.parentNode.insertBefore(g,s)}(document,"script"));
